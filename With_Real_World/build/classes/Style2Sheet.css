@@ -1,0 +1,8 @@
+.scene2{
+    -fx-background-color: black;
+    -fx-font-size:11pt;
+}
+.button{
+    -fx-postion-: center;
+     -fx-background-color: linear-gradient(#7CAFC2,BA8BAF);
+}
