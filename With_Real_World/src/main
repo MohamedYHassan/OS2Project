@@ -1,0 +1,58 @@
+
+public class Main {
+    public static void main(String[] args)  {
+
+        int factoryCount = 10;
+        int retailerCount = 10;
+        Inventory inventory = null;
+         inventory = inventory.getInstance();
+         inventory.setSize(100);
+
+        Retailer retailer = new Retailer(inventory);
+        Factory factory = new Factory(inventory);
+        
+        for (int i = 0; i < retailerCount; i++) {
+            Thread retailerThread = new Thread(retailer);
+            retailerThread.setName(i+1+"");
+            retailerThread.start();
+        }
+
+        for (int i = 0; i < factoryCount; i++) {
+            Thread factoryThread = new Thread(factory);
+            factoryThread.setName(i+1+"");
+            factoryThread.start();
+        }
+
+
+
+    }
+}
+/*
+if(btnFirstProdAccept.isDisabled() && btnSecondProdAccept.isDisabled()) {
+            producer1 = new Producer(listOfProducts, nameOfProd1, timeOfProd1);
+            Thread t1 = new Thread(producer1);
+
+            consumer1 = new Consumer(listOfProducts);
+            Thread t2 = new Thread(consumer1);
+
+
+            producer2 = new Producer(listOfProducts, nameOfProd1, timeOfProd1);
+            Thread t3 = new Thread(producer2);
+
+            consumer2 = new Consumer(listOfProducts);
+            Thread t4 = new Thread(consumer2);
+
+            t1.setDaemon(true);
+            t2.setDaemon(true);
+            t3.setDaemon(true);
+            t4.setDaemon(true);
+
+            t1.start();
+            t2.start();
+            t3.start();
+            t4.start();
+
+            btnStartProduction.setDisable(true);
+        }
+
+*/
