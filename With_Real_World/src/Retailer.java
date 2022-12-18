@@ -47,7 +47,7 @@ public class Retailer implements Runnable {
             details = new Details();
             details.setName(Thread.currentThread().getName() + " consumed " + product.getName());
             
-            Thread.sleep(1000);
+            //Thread.sleep(1000);
             
             System.out.println(Thread.currentThread().getName() + " consuming " + product.getName()) ;
             inventory.addDetails(details);
@@ -64,10 +64,10 @@ public class Retailer implements Runnable {
 
             inventory.mutex.release();
             inventory.empty.release();
-            Thread.sleep(1000);
+            //Thread.sleep(1000);
 //
             System.out.println(Thread.currentThread().getId() + " consumed" + product.getName());
-            Thread.sleep(1000);
+            //Thread.sleep(1000);
 
 
 
