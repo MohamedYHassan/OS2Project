@@ -56,14 +56,15 @@ public class Factory implements Runnable {
 
 
             inventory.add(product);
-           Thread.sleep(1000);
+           //Thread.sleep(1000);
             System.out.println(Thread.currentThread().getId() + " producing " + product.getName());
-            Thread.sleep(1000);
+            
              
 
 
 
             inventory.addDetails(details);
+            Thread.sleep(1000);
 //             for (Integer item: inventory.queue) {
 //                items.add(new Product(item+""));
 //             }
