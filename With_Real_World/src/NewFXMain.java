@@ -129,7 +129,7 @@ public class NewFXMain extends Application {
 
 
 
-        Label labe3 =new Label("Producer");
+        Label labe3 =new Label("Factories");
         labe3.setTranslateY(-80);
         labe3.setTranslateX(430);
 
@@ -140,7 +140,7 @@ public class NewFXMain extends Application {
         NumProducer.setTranslateX(430);
         NumProducer.setTranslateY(10);
 
-        Label labe4 =new Label("Consumer");
+        Label labe4 =new Label("Retailers");
         labe4.setTranslateY(-100);
         labe4.setTranslateX(10);
 
